@@ -2,9 +2,11 @@
 
 Personal utility plugin for my Obsidian vault. Currently provides:
 
-- **Open in GitHub** — adds an "Open in GitHub" item to the file explorer right-click menu. The current note is opened on the `main` branch of the vault's `origin` remote.
+- **Open in GitHub** — adds an "Open in GitHub" item to the file explorer right-click menu. The current note is opened on the `main` branch of the vault's `origin` remote. The GitHub remote URL is detected from `git config --get remote.origin.url` at runtime.
+- **Open in VSCode** — adds an "Open in VSCode" item to the file explorer right-click menu. On macOS the file is launched via `/usr/bin/open -a "Visual Studio Code"`; on other platforms via the `code` command on `PATH`.
+- **Open Recently Modified Files** — three command-palette commands ("Open files modified in last {5,15,60} minutes") that bulk-open every Markdown file modified within the chosen window in new tabs. Already-open files are skipped to avoid duplicate tabs. If more than 20 files would be opened, a confirm modal is shown.
 
-Desktop only. The GitHub remote URL is detected from `git config --get remote.origin.url` at runtime.
+Desktop only.
 
 ## Install (local development)
 
@@ -29,12 +31,16 @@ npm test      # jest
 
 ```
 src/
-  main.ts                  Plugin entry
-  features/openInGithub.ts file-menu item registration
-  git/githubUrl.ts         pure parsers and URL builder
-  git/remoteResolver.ts    git config wrapper
+  main.ts                          Plugin entry — registers each feature
+  features/openInGithub.ts         file-menu item: open current note on GitHub
+  features/openInVSCode.ts         file-menu item: open current note in VSCode
+  features/openRecentlyModified.ts command palette: bulk-open recently modified notes
+  git/githubUrl.ts                 pure parsers and URL builder
+  git/remoteResolver.ts            git config wrapper
+  notes/recentlyModified.ts        pure helpers: filter by mtime, partition by open status
 tests/
   githubUrl.test.ts
+  recentlyModified.test.ts
 ```
 
 ## Acknowledgments
