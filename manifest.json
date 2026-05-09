@@ -3,7 +3,7 @@
 	"name": "Vault Tools",
 	"version": "0.1.0",
 	"minAppVersion": "1.4.0",
-	"description": "Personal utilities for an Obsidian vault. Currently provides 'Open in GitHub' from the file explorer right-click menu.",
+	"description": "Personal utilities for an Obsidian vault: open notes on GitHub or in VSCode, and bulk-open recently modified notes from the command palette.",
 	"author": "katsuokaisao",
 	"authorUrl": "https://github.com/katsuokaisao",
 	"isDesktopOnly": true
