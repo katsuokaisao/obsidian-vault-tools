@@ -36,3 +36,14 @@ src/
 tests/
   githubUrl.test.ts
 ```
+
+## Acknowledgments
+
+The build setup (esbuild config, `manifest.json` shape, `tsconfig.json`,
+`isDesktopOnly` handling) is adapted from the official
+[obsidianmd/obsidian-sample-plugin](https://github.com/obsidianmd/obsidian-sample-plugin),
+which is distributed under the MIT License.
+
+## License
+
+MIT
