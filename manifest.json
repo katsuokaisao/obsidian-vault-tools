@@ -1,0 +1,10 @@
+{
+	"id": "vault-tools",
+	"name": "Vault Tools",
+	"version": "0.1.0",
+	"minAppVersion": "1.4.0",
+	"description": "Personal utilities for an Obsidian vault. Currently provides 'Open in GitHub' from the file explorer right-click menu.",
+	"author": "katsuokaisao",
+	"authorUrl": "https://github.com/katsuokaisao",
+	"isDesktopOnly": true
+}
