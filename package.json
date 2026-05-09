@@ -1,7 +1,7 @@
 {
 	"name": "obsidian-vault-tools",
 	"version": "0.1.0",
-	"description": "Personal utilities for an Obsidian vault: open notes on GitHub or in VSCode, and bulk-open recently modified notes from the command palette.",
+	"description": "Personal utilities for an Obsidian vault: open notes on GitHub or in VSCode, bulk-open recently modified files, and insert today's changelog into the daily note.",
 	"main": "main.js",
 	"scripts": {
 		"dev": "node esbuild.config.mjs",
